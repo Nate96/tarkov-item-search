@@ -1,0 +1,21 @@
+.mods {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 -10px;
+}
+
+.mod {
+  position: relative;
+  height: 64px;
+  width: 64px;
+  border: 1px solid grey;
+}
+
+.mod span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  text-transform: uppercase;
+}
