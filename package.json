@@ -2,7 +2,7 @@
   "name": "tarkov-item-search",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "tis.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "commander": "^12.0.0",
     "graphql": "^16.8.1",
     "graphql-request": "^6.1.0"
   }
