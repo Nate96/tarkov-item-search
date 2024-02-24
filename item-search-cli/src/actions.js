@@ -1,9 +1,8 @@
-import { inspect } from "util";
-import { TarkovApiItemQueries } from "./common/dist/queries.js";
+import { TarkovApiItemQueries } from "../../common/dist/src/tarkov/queries.js";
 
 /**
- * @typedef {import('./common/dist/graphql-client.js').GraphQLClient} GraphQLClient
- * @typedef {import('./common/dist/graphql/types.js').Item} Item
+ * @typedef {import('../../common/dist/src/tarkov/graphql-client.js').GraphQLClient} GraphQLClient
+ * @typedef {import('../../common/dist/src/graphql/types.js').Item} Item
  */
 
 /**
@@ -13,7 +12,7 @@ import { TarkovApiItemQueries } from "./common/dist/queries.js";
  */
 export async function getWeapon(graphqlClient, weaponName) {
   const query = TarkovApiItemQueries.Weapons.findByName(weaponName);
-  outputItems(graphqlClient, query);
+  return getData(graphqlClient, query);
 }
 
 /**
@@ -23,7 +22,7 @@ export async function getWeapon(graphqlClient, weaponName) {
  */
 export async function getSuppressors(graphqlClient, ammoType) {
   const query = TarkovApiItemQueries.Suppressors.findByAmmoType(ammoType);
-  outputItems(graphqlClient, query);
+  return getData(graphqlClient, query);
 }
 
 /**
@@ -33,7 +32,7 @@ export async function getSuppressors(graphqlClient, ammoType) {
  */
 export async function getAmmo(graphqlClient, ammoType) {
   const query = TarkovApiItemQueries.Ammo.findByAmmoType(ammoType);
-  outputItems(graphqlClient, query);
+  return getData(graphqlClient, query);
 }
 
 /**
@@ -41,10 +40,9 @@ export async function getAmmo(graphqlClient, ammoType) {
  * @param {GraphQLClient} graphqlClient
  * @param {string} query
  */
-async function outputItems(graphqlClient, query) {
+async function getData(graphqlClient, query) {
   /**
-   * @type {Item[]}
+   * @type {any[]}
    */
-  const items = await graphqlClient.query(query);
-  console.log(inspect(items, false, null, true));
+  return await graphqlClient.query(query);
 }

@@ -1,5 +1,1 @@
-An Application that searches items in Escape from Tarkov's DataBase
-
-# Run the Program
-1. chmod +x tis.js
-2. ./tis.js
+An suite of applications that allow for querying data in Escape from Tarkov's Database
