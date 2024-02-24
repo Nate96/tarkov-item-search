@@ -12,6 +12,8 @@
     "vite": "^5.1.0"
   },
   "dependencies": {
-    "bunnyjs": "^0.14.42"
+    "rxjs": "^7.8.1",
+    "typescript": "^5.3.3",
+    "vite-tsconfig-paths": "^4.3.1"
   }
 }

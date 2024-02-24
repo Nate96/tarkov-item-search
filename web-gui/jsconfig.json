@@ -1,8 +1,0 @@
-{
-  "compilerOptions": {
-    "module": "ES2015",
-    "target": "ES6",
-    "checkJs": true
-  },
-  "include": ["src/**/*"]
-}
