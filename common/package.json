@@ -7,18 +7,22 @@
   "scripts": {
     "build": "npm run clean && tsc",
     "clean": "rimraf dist",
-    "pack": "npm run clean && npm run build && npm pack"
+    "pack": "npm run clean && npm run build && npm pack",
+    "codegen": "graphql-codegen --config codegen.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@graphql-codegen/typescript-operations": "^4.1.3",
+    "@graphql-codegen/typescript-resolvers": "^4.0.5",
     "graphql": "^16.8.1",
     "graphql-request": "^6.1.0"
   },
   "devDependencies": {
     "@graphql-codegen/cli": "^5.0.2",
-    "@graphql-codegen/typescript": "^4.0.4",
+    "@graphql-codegen/introspection": "^4.0.3",
+    "@graphql-codegen/typescript": "^4.0.5",
     "@types/node": "^20.11.19",
     "rimraf": "^5.0.5"
   }

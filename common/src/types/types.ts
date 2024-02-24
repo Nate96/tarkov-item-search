@@ -1,0 +1,1 @@
+export type Maybe<T> = [T, Error] | [undefined, Error] | [T, undefined] | [undefined, undefined];

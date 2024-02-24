@@ -1,12 +1,24 @@
 import { gql } from "graphql-request";
 
 export class TarkovApiItemQueries {
+  static AllItems = {
+    getAllItems: (limit: number = 1, offset: number = 0) => gql`
+      {
+        items(limit: ${limit} offset: ${offset}) {
+          
+        }
+      }
+    `
+  }
+
   static Suppressors = {
     findByAmmoType: (ammoType: string) => gql`
     {
       items(name: "${ammoType} sound suppressor") {
         name
         shortName
+        iconLink
+        image512pxLink
         ergonomicsModifier
         recoilModifier
         weight

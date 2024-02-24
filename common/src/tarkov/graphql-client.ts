@@ -1,5 +1,5 @@
 import { gql, request, Variables } from 'graphql-request';
-import { HandbookCategoryName, Item, ItemCategoryName, ItemType, LanguageCode } from './graphql/types.js';
+import { HandbookCategoryName, Item, ItemCategoryName, ItemType, LanguageCode } from '../graphql/types.js';
 
 export class GraphQLClient {
   url: string;
@@ -9,7 +9,7 @@ export class GraphQLClient {
   }
 
   async query<T>(gql: string, variables: Variables = {}): Promise<T> {
-    return await request(this.url, gql, variables);
+    return await request<T>(this.url, gql, variables);
   }
 
   // WIP

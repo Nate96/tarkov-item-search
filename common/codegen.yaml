@@ -1,6 +1,0 @@
-schema: https://api.tarkov.dev/graphql
-documents: []
-generates:
-  src/graphql/types.ts:
-    plugins:
-      - 'typescript'
