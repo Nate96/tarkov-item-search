@@ -1,0 +1,54 @@
+:root {
+  --image-width: 128px;
+}
+
+.app-suppressors {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th {
+  font-size: 1.25rem;
+}
+
+tr {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.image-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.suppressor-image {
+  width: var(--image-width);
+  height: auto;
+}
+
+td {
+  height: calc(var(--image-width) * 1.25);
+  min-width: fit-content;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+td:first-of-type {
+  padding-left: 10px;
+}
+
+td:last-of-type {
+  padding-right: 10px;
+}
+
+td:not(:first-of-type):not(:last-of-type) {
+  padding: 0 30px;
+}
