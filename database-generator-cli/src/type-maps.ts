@@ -1,0 +1,1 @@
+// This file will hold all of the mappings between the types/objects in the api and the types/objects in the database.
